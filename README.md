@@ -1,6 +1,9 @@
-# esu!
+## RestInForget
+纯Perl/Perl CGI/html，没有css和js的赛博灵堂
+兼容telnet（需使用cgi服务，静态不可用）
 
-Perl 生成的复古文字站，提供静态 HTML、Perl CGI 和英文 Telnet 阅读器。零 CSS / JS。
+# 如何使用
+ps：这是一个纯自用的东西没考虑过方便其他人，所以如果你恰好感兴趣我建议直接把链接扔给ai
 
 编辑 `esu.md` / `esuen.md`，然后运行：
 
@@ -17,10 +20,8 @@ perl preview.pl
 
 依赖 `HTML::TreeBuilder`，本地预览另需 `HTTP::Daemon`；缺少时运行 `cpan HTML::TreeBuilder HTTP::Daemon`。`Text::Markdown` 已附在 `lib/`，保留其许可证。本地服务仅监听本机。
 
-日志与部署 ZIP 不提交，`dist/` 保留在仓库。
+部署ZIP在Release。
 
 自写代码与文章采用 [WTFPL v2](LICENSE)，第三方组件保留原许可证，见 [许可说明](THIRD_PARTY_NOTICES.md)。
 
-> This project was 100% created using True Natural Language Programming (a.k.a. Vibe Coding).
->
-> — Codex
+> This project was 100% created using True Natural Language Programming (a.k.a. Vibe Coding).  —— Codex
