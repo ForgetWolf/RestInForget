@@ -1,0 +1,19 @@
+# Local logs and generated deployment archives
+*.log
+/static-version.zip
+/cgi-version.zip
+
+# Editor backups and OS metadata
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Keep dist/ tracked: these are the ready-to-publish static pages.
