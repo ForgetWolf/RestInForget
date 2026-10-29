@@ -1,0 +1,57 @@
+name: Build and deploy Pages
+
+# main 更新后自动发布，也可以在 Actions 页面手动运行。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 只允许读取源码、发布 Pages 和获取发布所需的 OIDC 身份令牌。
+# 不需要个人访问令牌，也不会把构建结果提交回仓库。
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只发布一个版本，避免多次推送产生重叠部署。
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      # 仓库 Settings > Pages > Source 需要选择 GitHub Actions。
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # Ubuntu runner 已有 Perl；构建英文 TXT 还需要 HTML::TreeBuilder。
+      # Text::Markdown 已在 lib/ 内，无需安装 HTTP::Daemon 或启动 CGI。
+      - name: Install Perl dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libhtml-tree-perl
+
+      # 从两份 Markdown 重新生成网页、ASCII 文本和许可证文件。
+      - name: Generate static pages
+        run: perl build.pl
+
+      # 仅发布 dist/，源码、日志和部署 ZIP 都不会成为网站文件。
+      - name: Upload static pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      # 访客访问生成好的静态文件；Pages 不运行 Perl CGI 或 Telnet。
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
