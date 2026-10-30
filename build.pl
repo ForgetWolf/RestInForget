@@ -14,7 +14,7 @@ for my $old ('en.html', 'en.txt') {
     move("$FindBin::Bin/dist/$old", "$FindBin::Bin/.local/legacy/$old")
         or die "Archive legacy file $old: $!";
 }
-for my $notice ('LICENSE', 'THIRD_PARTY_NOTICES.md') {
+for my $notice ('LICENSE', 'THIRD_PARTY_NOTICES.md', 'CONTENT_LICENSE.md', 'LICENSE-CONTENT.txt') {
     copy("$FindBin::Bin/$notice", "$FindBin::Bin/dist/$notice") or die "Copy $notice: $!";
 }
 open my $marker, '>', "$FindBin::Bin/dist/.nojekyll" or die $!;

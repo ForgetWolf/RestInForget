@@ -1,8 +1,14 @@
 # Licensing scope
 
-The original code and authored content of esu!, including its Markdown articles
-and generated HTML/text, are licensed under WTFPL version 2; see `LICENSE`.
-This grant does not relicense third-party code or third-party material.
+The original program code, build scripts and HTML templates of esu! are licensed
+under WTFPL version 2; see `LICENSE`.
+
+Original prose in `zh-cn.md`, `en-us.md`, and the README, including article text
+reproduced in generated HTML, plain text and Telnet output, is licensed under
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0). See `CONTENT_LICENSE.md` and `LICENSE-CONTENT.txt`.
+
+Neither grant relicenses third-party code or third-party material.
 The Sam Hocevar copyright in `LICENSE` identifies the license document's author,
 not the author of this project.
 

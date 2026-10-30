@@ -225,3 +225,7 @@ Friendly ]
 
 This project was 100% created using True Natural Language Programming (a.k.a.
 Vibe Coding).
+
+Text: CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/,
+attribution: ForgetWolf. Code: WTFPL. Previously granted WTFPL permissions for
+earlier text remain valid.
