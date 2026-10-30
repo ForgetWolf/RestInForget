@@ -1,0 +1,47 @@
+name: Publish release 1.1.451
+
+# 仅响应本次指定的标签，不会因普通 main 推送发布新版本。
+on:
+  push:
+    tags:
+      - '1.1.451'
+
+# 使用 GitHub 提供的短期令牌创建 Release，无需个人 Token。
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install build dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libhtml-tree-perl zip
+
+      # 从标签对应的源码构建，部署包不包含日志、Git 元数据或解释器。
+      - name: Build deployment packages
+        run: |
+          perl build.pl
+          perl -c index.pl
+          (cd dist && zip -r ../static-version.zip .)
+          zip -r cgi-version.zip index.pl build.pl preview.pl telnet.pl lib \
+            zh-cn.md en-us.md README.md LICENSE THIRD_PARTY_NOTICES.md \
+            CONTENT_LICENSE.md LICENSE-CONTENT.txt
+
+      - name: Publish release and upload ZIPs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            static-version.zip cgi-version.zip \
+            --verify-tag \
+            --title "RestInForget $GITHUB_REF_NAME" \
+            --notes-file .github/release-notes/1.1.451.md
