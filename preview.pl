@@ -31,7 +31,12 @@ while (my $client = $server->accept) {
                 $client->send_response($res);
             }
         } else {
-            my %files = ('/' => 'index.html', '/index.html' => 'index.html', '/en.html' => 'en.html', '/en.txt' => 'en.txt');
+            my %files = (
+                '/' => 'index.html', '/index.html' => 'index.html',
+                '/english.html' => 'english.html', '/english.txt' => 'english.txt',
+                # 旧地址兼容已停用。
+                # '/en.html' => 'en.html', '/en.txt' => 'en.txt',
+            );
             if (exists $files{$path}) {
                 $client->send_file_response("$FindBin::Bin/dist/$files{$path}");
             } else { $client->send_error(404); }

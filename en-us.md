@@ -2,9 +2,9 @@
 
 ## THIS IS A ENG VERSION TRANDLATE BY DeepL.
 
-<!--
 There is no posthumous photo at this time. As for why there isn't one, the OTTO said, “Why?”
 
+<!--
 <div align="center">
 
 (./asset/遗照.jpg)
@@ -99,7 +99,7 @@ The following is an outline of the life of this good-for-nothing with a dead mot
 - (Present Day 3) Met **Person 8** and **Person 9** (no longer in my life) through **Person 7**.
 - (Side Note) Graduated from middle school.
 - (Modern Period 4) **Major Turning Point**: Began using psychotropic drugs.
-- (Modern Period 2) Joined **Person 9**’s (now defunct) friends and family group; cut ties after a verbal altercation with **Person 10**.
+- (Modern Period 5) Joined **Person 9**’s (now defunct) friends and family group; cut ties after a verbal altercation with **Person 10**.
 - (Side Note) Due to cutting ties with **Person 10**, I activated chainblock to block a large number of “refined” individuals.
 - (Side Note) Graduated from high school.
 - (Postmodern Period 1) After a verbal spat with **Person 6**, I was “righteous-olived” by them, which led to some distasteful incidents—not listed in this timeline—being forwarded to **Person 4**.
@@ -112,6 +112,7 @@ The following is an outline of the life of this good-for-nothing with a dead mot
 - I originally started writing this as a joke—I told someone I was going to write “ForgetWolf.RIP”—and then I realized I could actually buy this weird, funny domain name, so I figured, “Why not go all out?” and set up an esu! Memories fade and get romanticized over time, but words don’t, so I’m writing this down here for my future self or any passerby. You could also say I’m too lazy to write it all out in full ----But who cares? Writing this is less about commemoration and more about forgetting—much like the monument on Red Shore in *The Three-Body Problem*. It’s a history and a past that aren’t exactly glorious, but they did exist. All I can do is forget—or rather, record these things before time completely beautifies and rewrites my memories.
 The only thing people learn from history is that they learn nothing from history, so it’s probably fair to say that history is nothing more than a list of dead people’s names. Whether it’s people or events, no matter how much we reflect or regret, we can’t go back to that time, nor can we change the established facts of what has already happened. It happened, it existed, it came to be, it was experienced—and so I’ve written them down. 
 Consider this a human diary or record with a defiant, unconventional style—just read it and have a laugh.
+---- ForgetWolf 2026.10.29 21:41 (GMT+8) Jiujiang City,Kiangsi,PRC
 
 <!--
 - 最初写这玩意是来源于和人开玩笑说我要写个ForgetWolf.RIP，然后一看这个奇异搞笑的域名我真能买到，所以干脆一不做二不休的开了一个esu!，记忆是会随着时间忘却与美化的，但文字不会，所以我在这里写下这些东西给后面的我自己或者任何过客看，也可以说我懒得去完完整整写下来----但是谁在乎呢？写这种东西与其说是为了纪念倒不如说是为了忘却，宛如三体中红岸的纪念碑，并不光彩的历史与过去，但确实存在，而我所能做的也无非在忘记或者说在时间彻底美化与改写记忆前把这些记录下来。

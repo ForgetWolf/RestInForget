@@ -8,9 +8,12 @@ use Text::Wrap;
 use Exporter 'import';
 our @EXPORT_OK = qw(page english_text);
 
+# One name everywhere: the language code is also the source file name.
+my %SOURCE = ('zh-cn' => 'zh-cn.md', 'en-us' => 'en-us.md');
+
 sub source {
     my ($root, $lang) = @_;
-    my $name = $lang eq 'en' ? 'esuen.md' : 'esu.md';
+    my $name = $SOURCE{$lang} or die "Unknown language: $lang";
     open my $fh, '<:encoding(UTF-8)', "$root/$name" or die "Read $name: $!";
     local $/;
     my $md = <$fh>;
@@ -61,7 +64,7 @@ sub table {
 sub page {
     my ($root, $lang, $cgi) = @_;
     my $zh = $cgi ? 'index.pl' : 'index.html';
-    my $en = $cgi ? 'index.pl?lang=en' : 'en.html';
+    my $en = $cgi ? 'index.pl?lang=en-us' : 'english.html';
     my $body = article($root, $lang);
     $body =~ s{<hr\b[^>]*>}{<hr color="#385c42" size="1" noshade>}gi;
     my @toc;
@@ -80,15 +83,15 @@ sub page {
         . sprintf("| %-40s |\n", 'F O R G E T W O L F  /  A R C H I V E')
         . sprintf("| %-40s |\n", 'PERSONAL LOG                 [ ONLINE ]')
         . $edge;
-    my $navigation = $lang eq 'en' ? 'INDEX / OPEN DIRECTORY' : 'INDEX / 展开目录';
-    my $back = $lang eq 'en' ? 'BACK TO TOP' : '返回顶部';
+    my $navigation = $lang eq 'en-us' ? 'INDEX / OPEN DIRECTORY' : 'INDEX / 展开目录';
+    my $back = $lang eq 'en-us' ? 'BACK TO TOP' : '返回顶部';
     return qq(<!doctype html>\n<html lang="$lang">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>ForgetWolf - Archive</title>\n</head>\n<body id="top" bgcolor="#080d09" text="#95c98b" link="#e0c078" vlink="#a6ad78" alink="#ffffff">\n<table width="90%" align="center" cellpadding="12" cellspacing="0"><tr><td>\n<font face="monospace" size="3">\n<header>\n<pre>$banner</pre>\n<nav>[ <a href="$zh">ZH / 中文</a> ] &nbsp; [ <a href="$en">EN / English</a> ] &nbsp; [ <a href="#directory">INDEX</a> ]</nav>\n<hr color="#385c42" size="1">\n</header>\n<details id="directory"><summary>$navigation</summary><ol>) . join('', @toc) . qq(</ol></details>\n<hr color="#385c42" size="1">\n<main>\n$body</main>\n<p>[ <a href="#top">^ $back</a> ]</p>\n</font>\n</td></tr></table>\n</body>\n</html>\n);
 }
 
 sub english_text {
     my ($root) = @_;
     my $tree = HTML::TreeBuilder->new;
-    $tree->parse_content(article($root, 'en'));
+    $tree->parse_content(article($root, 'en-us'));
     my $walk;
     $walk = sub {
         my ($node) = @_;
