@@ -24,6 +24,6 @@ perl preview.pl
 
 部署ZIP在Release。
 
-自写代码采用 [WTFPL v2](LICENSE)，原创文字采用 [CC BY-NC-SA 4.0](CONTENT_LICENSE.md)。旧版已授予的 WTFPL 权利不撤销；第三方组件保留原许可证，见 [许可说明](THIRD_PARTY_NOTICES.md)。
+自写代码采用 [WTFPL v2](LICENSE)，原创文字采用 [CC BY-NC-SA 4.0](CONTENT_LICENSE.md)。2026-10-30 之前按 WTFPL 发布的文字，其授权不撤销；第三方组件保留原许可证，见 [许可说明](THIRD_PARTY_NOTICES.md)。页面不显示许可声明，许可文本随仓库与 `dist/` 一同发布。
 
 > This project was 100% created using True Natural Language Programming (a.k.a. Vibe Coding).  —— Codex

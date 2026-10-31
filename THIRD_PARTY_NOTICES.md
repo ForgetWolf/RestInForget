@@ -1,7 +1,10 @@
 # Licensing scope
 
+Copyright (c) 2026 ForgetWolf.
+
 The original program code, build scripts and HTML templates of esu! are licensed
-under WTFPL version 2; see `LICENSE`.
+under WTFPL version 2; see `LICENSE`. The WTFPL attaches no conditions, so this
+project asks nothing of you beyond keeping the bundled third-party notices.
 
 Original prose in `zh-cn.md`, `en-us.md`, and the README, including article text
 reproduced in generated HTML, plain text and Telnet output, is licensed under
@@ -9,17 +12,16 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 (CC BY-NC-SA 4.0). See `CONTENT_LICENSE.md` and `LICENSE-CONTENT.txt`.
 
 Neither grant relicenses third-party code or third-party material.
-The Sam Hocevar copyright in `LICENSE` identifies the license document's author,
-not the author of this project.
 
 ## Bundled: Text::Markdown 1.000031
 
 Source: https://metacpan.org/release/BOBTFISH/Text-Markdown-1.000031
 
 `lib/Text/Markdown.pm` retains its original BSD-3-Clause-form terms and copyright
-notices, rather than WTFPL. Preserve the notices and disclaimer when redistributing.
-The distribution's license text is also retained in
-`lib/Text/Markdown-LICENSE.txt`.
+notices, rather than WTFPL. Preserve the notices and disclaimer when
+redistributing. The distribution's license text is also retained in
+`lib/Text/Markdown-LICENSE.txt`. Both sets of terms are permissive, so the
+bundled files can travel with this project as long as their own notices do.
 
 Copyright holders identified in the module:
 

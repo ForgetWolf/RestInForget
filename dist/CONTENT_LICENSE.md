@@ -17,4 +17,4 @@ Attribution-NonCommercial-ShareAlike 4.0 International.
 This notice applies from the licensing change dated 2026-10-30. Previously
 granted WTFPL permissions remain available for previously released material.
 
-自写程序代码、构建脚本和 HTML 模板继续采用 [WTFPL v2](LICENSE)。第三方引用和组件不因本声明改变许可，参见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+自写程序代码、构建脚本和 HTML 模板采用 [WTFPL v2](LICENSE)。第三方引用和组件不因本声明改变许可，参见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

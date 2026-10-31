@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: WTFPL
 package Esu;
 use strict;
 use warnings;
@@ -85,7 +86,20 @@ sub page {
         . $edge;
     my $navigation = $lang eq 'en-us' ? 'INDEX / OPEN DIRECTORY' : 'INDEX / 展开目录';
     my $back = $lang eq 'en-us' ? 'BACK TO TOP' : '返回顶部';
-    return qq(<!doctype html>\n<html lang="$lang">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>ForgetWolf - Archive</title>\n</head>\n<body id="top" bgcolor="#080d09" text="#95c98b" link="#e0c078" vlink="#a6ad78" alink="#ffffff">\n<table width="90%" align="center" cellpadding="12" cellspacing="0"><tr><td>\n<font face="monospace" size="3">\n<header>\n<pre>$banner</pre>\n<nav>[ <a href="$zh">ZH / 中文</a> ] &nbsp; [ <a href="$en">EN / English</a> ] &nbsp; [ <a href="#directory">INDEX</a> ]</nav>\n<hr color="#385c42" size="1">\n</header>\n<details id="directory"><summary>$navigation</summary><ol>) . join('', @toc) . qq(</ol></details>\n<hr color="#385c42" size="1">\n<main>\n$body</main>\n<p>[ <a href="#top">^ $back</a> ]</p>\n</font>\n</td></tr></table>\n</body>\n</html>\n);
+    # CGI-only source/licence footer, disabled on purpose: the copyright holder
+    # is not bound by the licence it hands to others, and the WTFPL asks for
+    # nothing anyway. Kept here for reference.
+    # my $repo = 'https://github.com/ForgetWolf/RestInForget';
+    # my $license = '';
+    # if ($cgi) {
+    #     my $code = qq(<a href="$repo/blob/main/LICENSE">WTFPL</a>);
+    #     my $text = qq(<a href="$repo/blob/main/CONTENT_LICENSE.md">CC BY-NC-SA 4.0</a>);
+    #     $license = $lang eq 'en-us'
+    #         ? qq(<p>[ <a href="$repo">^ SOURCE</a> ] &nbsp; CODE: $code &nbsp; TEXT: $text</p>\n)
+    #         : qq(<p>[ <a href="$repo">^ 源码 / SOURCE</a> ] &nbsp; 代码 $code &nbsp; 文字 $text</p>\n);
+    # }
+    my $license = '';
+    return qq(<!doctype html>\n<html lang="$lang">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>ForgetWolf - Archive</title>\n</head>\n<body id="top" bgcolor="#080d09" text="#95c98b" link="#e0c078" vlink="#a6ad78" alink="#ffffff">\n<table width="90%" align="center" cellpadding="12" cellspacing="0"><tr><td>\n<font face="monospace" size="3">\n<header>\n<pre>$banner</pre>\n<nav>[ <a href="$zh">ZH / 中文</a> ] &nbsp; [ <a href="$en">EN / English</a> ] &nbsp; [ <a href="#directory">INDEX</a> ]</nav>\n<hr color="#385c42" size="1">\n</header>\n<details id="directory"><summary>$navigation</summary><ol>) . join('', @toc) . qq(</ol></details>\n<hr color="#385c42" size="1">\n<main>\n$body</main>\n<p>[ <a href="#top">^ $back</a> ]</p>\n$license</font>\n</td></tr></table>\n</body>\n</html>\n);
 }
 
 sub english_text {

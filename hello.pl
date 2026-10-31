@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+# SPDX-License-Identifier: WTFPL
 use strict;
 use warnings;
 use IO::Socket::INET;

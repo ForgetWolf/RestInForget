@@ -116,5 +116,3 @@
 - P.S [ This website built with Pure HTML & Perl CGI | 0% CSS | 0% JS | Telnet Friendly ]
 以及我觉得有必要说明，这是一个100%使用自然语言写出来的网站，甚至是用的中文，当然肯定不是易语言，是vibe出来的AI SLOP。
 This project was 100% created using True Natural Language Programming (a.k.a. Vibe Coding).
-
-文字许可：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)；署名 ForgetWolf。代码仍为 WTFPL。此前已按 WTFPL 发布的文字授权不撤销。

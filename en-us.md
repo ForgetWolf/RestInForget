@@ -127,5 +127,3 @@ Consider this a human diary or record with a defiant, unconventional style—jus
 以及我觉得有必要说明，这是一个100%使用自然语言写出来的网站，甚至是用的中文，当然肯定不是易语言，是vibe出来的AI SLOP。
 -->
 This project was 100% created using True Natural Language Programming (a.k.a. Vibe Coding).
-
-Text: CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>, attribution: ForgetWolf. Code: WTFPL. Previously granted WTFPL permissions for earlier text remain valid.
